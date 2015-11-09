@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/layoutID"
+    android:background="#202125">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamAbtn"
+        android:background="@drawable/button_style"
+        android:paddingLeft="60dp"
+        android:paddingTop="70dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="70dp"
+        android:text="GOAL"
+        android:onClick="teamAgoal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#C1E1A6"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goalBtn"
+        android:id="@+id/teamBbtn"
+        android:background="@drawable/button_style"
+        android:paddingLeft="60dp"
+        android:paddingTop="70dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="70dp"
+        android:layout_alignTop="@+id/teamAbtn"
+        android:layout_alignParentEnd="true"
+        android:onClick="teamBgoal"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:textColor="#C1E1A6"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/scoreA"
+        android:id="@+id/teamAscore"
+        android:textSize="100dp"
+        android:textStyle="bold"
+        android:freezesText="true"
+        android:onClick="reduceA"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/teamAbtn"
+        android:layout_toRightOf="@+id/teamAbtn" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/scoreB"
+        android:id="@+id/teamBscore"
+        android:textSize="100dp"
+        android:textStyle="bold"
+        android:onClick="reduceB"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/teamBbtn"
+        android:layout_toLeftOf="@+id/teamBbtn"
+        android:layout_above="@+id/chronometer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/scoreBg"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/teamAscore"
+        android:background="#fff" />
+
+    <Chronometer
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:id="@+id/chronometer"
+        android:format="%s"
+        android:background="#323336"
+        android:autoText="false"
+        android:gravity="center|center_vertical"
+        android:onClick="toggle"
+        android:textSize="50dp"
+        android:layout_below="@+id/teamAscore"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/teamAbtn"
+        android:layout_toLeftOf="@+id/teamBbtn" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/dash"
+        android:id="@+id/textView"
+        android:textSize="100dp"
+        android:textStyle="bold"
+        android:freezesText="true"
+        android:onClick="reduceA"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/penaltyBtn"
+        android:background="@drawable/button_style_red"
+        android:text="@string/pen"
+        android:onClick="penalty"
+        android:textColor="#6d2121"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:layout_below="@+id/chronometer"
+        android:layout_alignEnd="@+id/teamBscore"
+        android:layout_toEndOf="@+id/teamAscore"
+        android:layout_toLeftOf="@+id/teamBbtn"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/incedent"
+        android:background="@drawable/button_style_orange"
+        android:text="@string/incident"
+        android:textColor="#6d2121"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/teamAbtn"
+        android:layout_toRightOf="@+id/teamAbtn"
+        android:layout_toLeftOf="@+id/penaltyBtn"
+        android:layout_below="@+id/chronometer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/teamAname"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/teamAbtn"
+        android:layout_above="@+id/chronometer"
+        android:layout_toStartOf="@+id/teamAscore"
+        android:gravity="center"
+        android:textColor="#C1E1A6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/teamBname"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#C1E1A6"
+        android:layout_above="@+id/chronometer"
+        android:layout_alignLeft="@+id/teamBbtn"
+        android:layout_alignEnd="@+id/teamBbtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/stageText"
+        android:textColor="#FFFFFF"
+        android:typeface="monospace"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/teamAscore"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

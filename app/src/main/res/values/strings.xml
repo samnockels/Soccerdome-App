@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Soccerdome Match App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="goalBtn">GOAL</string>
+
+    <string name="scoreA">0</string>
+    <string name="dash">-</string>
+    <string name="scoreB">0</string>
+    <string name="title_activity_select_teams">SelectTeams</string>
+    <string name="pen">PENALTY</string>
+    <string name="incident">INCIDENT</string>
+    <string name="title_activity_match_uploaded_screen">MatchUploadedScreen</string>
+    <string name="title_activity_penalty_details">PenaltyDetails</string>
+
+
+</resources>

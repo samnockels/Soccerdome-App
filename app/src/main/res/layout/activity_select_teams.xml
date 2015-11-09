@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sam.soccerdomematchapp.SelectTeams"
+    android:background="#202125"
+    android:id="@+id/layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Match"
+        android:id="@+id/textView2"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center|center_vertical"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Start Match"
+        android:id="@+id/startMatch"
+        android:onClick="matchStart"
+        android:background="@drawable/button_style"
+        android:textColor="#C1E1A6"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/heading"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Results Found."
+        android:id="@+id/heading"
+        android:textSize="15dp"
+        android:textColor="#FF0000"
+        android:fontFamily="Roboto"
+        android:textIsSelectable="true"
+        android:gravity="center"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView2"
+        android:paddingTop="10dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        tools:listitem="@layout/list_view_style"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        style="@style/ListView"
+        android:focusable="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+
+        android:layout_above="@+id/startMatch"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Refresh"
+        android:id="@+id/button"
+        android:background="@drawable/text_button_style_grey"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:onClick="refreshList"
+        android:layout_below="@+id/heading"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/heading" />
+
+
+</RelativeLayout>
